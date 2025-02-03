@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=mysql-container
+      - DB_USER=root
+      - DB_PASSWORD=admin
+      - DB_NAME=mysql
+    networks:
+      - connector
+    depends_on:
+      - mysql    
+
+  mysql:
+    image: mysql:8
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - connector
+
+volumes:
+  mysql_data:
+networks:
+  connector:
