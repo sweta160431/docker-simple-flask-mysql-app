@@ -75,7 +75,7 @@ docker-compose up -d
 
 ### **3️⃣ Verify the Application**
 Check in the browser:
-```
+
 http://<your-public-ip>:5000
 
 ![Screenshot (27)](https://github.com/user-attachments/assets/0ad57b10-16ff-4523-9841-da1912405212)
@@ -85,8 +85,6 @@ http://<your-public-ip>:5000/mysql
 
 ![Screenshot (28)](https://github.com/user-attachments/assets/920b2507-7f3b-489a-9c8b-2db5376b4f67)
 
-
-```
 
 ---
 
